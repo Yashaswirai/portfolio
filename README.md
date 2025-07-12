@@ -1,6 +1,6 @@
 # Interactive Portfolio
 
-A modern, responsive portfolio website built with React, Vite, Tailwind CSS, and enhanced with GSAP and Three.js animations.
+A modern, responsive portfolio website built with React, Vite, Tailwind CSS, and enhanced with Framer Motion animations.
 
 ## 🚀 Features
 
@@ -74,9 +74,9 @@ The portfolio is fully responsive and optimized for:
 
 ## 📧 Contact
 
-- Email: your.email@example.com
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- GitHub: [Your GitHub](https://github.com/yourusername)
+- Email: yashaswirai2016@gmail.com
+- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yashaswi-rai-real)
+- GitHub: [Your GitHub](https://github.com/yashaswirai)
 
 ---
 

@@ -66,7 +66,7 @@ const Projects = () => {
       githubLink: 'https://github.com/Yashaswirai/MERN-LUMINA',
       icon: ShoppingCart,
       category: 'Full Stack Development',
-      featured: false
+      featured: true
     }
   ]
 

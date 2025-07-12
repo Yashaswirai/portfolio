@@ -16,13 +16,27 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Component styles - You can customize these with your Tailwind config */
+/* Component styles - Enhanced for mobile responsiveness */
 .btn-primary {
   @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+  /* Enhanced mobile touch targets */
+  min-height: 48px;
+  touch-action: manipulation;
 }
 
 .btn-secondary {
   @apply bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-medium py-3 px-6 rounded-lg transition-all duration-300;
+  /* Enhanced mobile touch targets */
+  min-height: 48px;
+  touch-action: manipulation;
+}
+
+/* Mobile-specific button optimizations */
+@media (max-width: 640px) {
+  .btn-primary, .btn-secondary {
+    @apply py-4 px-8 text-base;
+    min-height: 52px;
+  }
 }
 
 .section-padding {
@@ -67,7 +81,53 @@ h1, h2, h3, h4, h5, h6 {
   @apply bg-blue-600;
 }
 
-/* Smooth scrolling */
+/* Smooth scrolling with reduced motion support */
 html {
   scroll-behavior: smooth;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Performance optimizations for mobile */
+@media (max-width: 768px) {
+  /* Reduce backdrop blur on mobile for better performance */
+  .glass-effect {
+    @apply bg-white/10 border border-white/20;
+    backdrop-filter: blur(4px);
+  }
+
+  /* Optimize text rendering on mobile */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+  }
+}
+
+/* Enhanced touch targets for mobile */
+@media (max-width: 640px) {
+  /* Ensure all interactive elements meet minimum touch target size */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Improve text readability on small screens */
+  .gradient-text {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* Fallback for better contrast on low-end devices */
+    color: #3b82f6;
+  }
 }
