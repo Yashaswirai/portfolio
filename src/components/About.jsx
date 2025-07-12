@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { gsap } from 'gsap'
 import { Code, Database, Palette, Users } from 'lucide-react'
-import profile from '../assets/profile.jpg' // Placeholder for your profile image
+import profile from '../assets/Profile.jpg' // Placeholder for your profile image
 const About = () => {
   const aboutRef = useRef()
   const { ref, inView } = useInView({
